@@ -1,5 +1,5 @@
-TOKEN = "7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0" #для тг бота
+TOKEN = "токен бота в тг" #для тг бота
 
-# для спотика
-client_id="58d7b116ed554bc887778a247e53c3d1",
-client_secret="6e33db33c2394f80a78eb28235b7d3b5"
+# для спотика https://developer.spotify.com/dashboard
+client_id="токен спотика 1",
+client_secret="токен спотика 2"

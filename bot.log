@@ -1,0 +1,45 @@
+2024-12-06 18:35:00,011 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getMe "HTTP/1.1 200 OK"
+2024-12-06 18:35:00,111 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/deleteWebhook "HTTP/1.1 200 OK"
+2024-12-06 18:35:00,112 - telegram.ext.Application - INFO - Application started
+2024-12-06 18:35:10,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:35:15,929 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:35:15,972 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2024-12-06 18:35:15,972 - telegram.ext.Application - INFO - Application.stop() complete
+2024-12-06 18:35:27,164 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getMe "HTTP/1.1 200 OK"
+2024-12-06 18:35:27,266 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/deleteWebhook "HTTP/1.1 200 OK"
+2024-12-06 18:35:27,267 - telegram.ext.Application - INFO - Application started
+2024-12-06 18:35:28,858 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:35:28,867 - handlers - INFO - Пользователь shpek616 (673739010) запустил бота.
+2024-12-06 18:35:28,998 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/sendMessage "HTTP/1.1 200 OK"
+2024-12-06 18:35:38,974 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:35:41,861 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:35:42,627 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/sendMessage "HTTP/1.1 200 OK"
+2024-12-06 18:35:45,658 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:35:45,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/sendMessage "HTTP/1.1 200 OK"
+2024-12-06 18:35:47,291 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:35:47,430 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/answerCallbackQuery "HTTP/1.1 200 OK"
+2024-12-06 18:35:47,549 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/browse/categories/pop/playlists with Params: {'country': None, 'limit': 10, 'offset': 0} returned 404 due to Not Found
+2024-12-06 18:35:47,712 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/editMessageText "HTTP/1.1 200 OK"
+2024-12-06 18:35:48,725 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:35:48,879 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/sendMessage "HTTP/1.1 200 OK"
+2024-12-06 18:35:58,857 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:36:08,971 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:36:16,538 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:36:16,539 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2024-12-06 18:36:16,539 - telegram.ext.Application - INFO - Application.stop() complete
+2024-12-06 18:41:53,552 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getMe "HTTP/1.1 200 OK"
+2024-12-06 18:41:53,657 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/deleteWebhook "HTTP/1.1 200 OK"
+2024-12-06 18:41:53,659 - telegram.ext.Application - INFO - Application started
+2024-12-06 18:41:55,741 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:41:56,333 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/sendMessage "HTTP/1.1 200 OK"
+2024-12-06 18:41:58,330 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:41:58,560 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/sendMessage "HTTP/1.1 200 OK"
+2024-12-06 18:41:59,757 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:41:59,876 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/answerCallbackQuery "HTTP/1.1 200 OK"
+2024-12-06 18:41:59,993 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/browse/categories/electronic/playlists with Params: {'country': None, 'limit': 10, 'offset': 0} returned 404 due to Not Found
+2024-12-06 18:42:00,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/editMessageText "HTTP/1.1 200 OK"
+2024-12-06 18:42:00,884 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:42:01,025 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/sendMessage "HTTP/1.1 200 OK"
+2024-12-06 18:42:04,162 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7981804116:AAGIz41m01LUCF1FHRSgyFmyFlcDPDuOsS0/getUpdates "HTTP/1.1 200 OK"
+2024-12-06 18:42:04,163 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2024-12-06 18:42:04,164 - telegram.ext.Application - INFO - Application.stop() complete

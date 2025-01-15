@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Bot",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/bot.py",  // Укажите путь к bot.py
+            "console": "integratedTerminal",
+            "justMyCode": false  // Включает отладку всех импортированных модулей
+        }
+    ]
+}

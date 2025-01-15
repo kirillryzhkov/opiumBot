@@ -2,7 +2,7 @@ from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKe
 from spotify import get_top_tracks, search_tracks, search_playlists, get_playlists_by_genre, get_random_tracks_by_genre
 from db import save_user, save_query
 import logging
-
+from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler
 
 logger = logging.getLogger(__name__)
 
@@ -15,22 +15,24 @@ MAIN_MENU = ReplyKeyboardMarkup(
 
 GENRE_KEYBOARD = InlineKeyboardMarkup(
     [
-        [InlineKeyboardButton("Pop", callback_data="genre_pop")],
-        [InlineKeyboardButton("Rock", callback_data="genre_rock")],
-        [InlineKeyboardButton("Hip-Hop", callback_data="genre_hip-hop")],
-        [InlineKeyboardButton("Jazz", callback_data="genre_jazz")],
-        [InlineKeyboardButton("Electronic", callback_data="genre_electronic")],
+        [InlineKeyboardButton("Pop", callback_data="pop")],
+        [InlineKeyboardButton("Rock", callback_data="rock")],
+        [InlineKeyboardButton("Hip-Hop", callback_data="hip-hop")],
+        [InlineKeyboardButton("Jazz", callback_data="jazz")],
+        [InlineKeyboardButton("Electronic", callback_data="electronic")],
     ]
 )
 
-async def start(update: Update, context):
+# Команда /start
+async def start(update: Update, context: CallbackContext):
     user = update.message.from_user
     save_user(user.id, user.username, user.first_name, user.last_name)
     logger.info(f"Пользователь {user.username} ({user.id}) запустил бота.")
 
     await update.message.reply_text("Привет! Выберите опцию из меню:", reply_markup=MAIN_MENU)
 
-async def top_tracks(update: Update, context):
+# Топ-10 треков недели
+async def top_tracks(update: Update, context: CallbackContext):
     tracks = get_top_tracks()
     if tracks:
         message = "\n".join([f"{t['name']} - {t['artist']} [Слушать]({t['url']})" for t in tracks])
@@ -38,37 +40,42 @@ async def top_tracks(update: Update, context):
     else:
         await update.message.reply_text("Не удалось загрузить треки.")
 
-async def popular_playlists(update: Update, context):
-    await update.message.reply_text("Выберите жанр для получения популярных плейлистов:", reply_markup=GENRE_KEYBOARD)
+# Популярные плейлисты
+async def popular_playlists(update: Update, context: CallbackContext):
+    playlists = get_playlists_by_genre("dinner")
+    await update.message.reply_text(playlists)
 
-async def show_playlists(update: Update, context):
+# Показывать плейлисты по жанру
+async def show_playlists(update: Update, context: CallbackContext):
     query = update.callback_query
     await query.answer()
-    genre = query.data.split("_")[1]
+
+    genre = query.data  # Теперь genre это сам жанр, как "pop", "rock" и т. д.
     playlists = get_playlists_by_genre(genre)
+    
     if playlists:
         message = "\n".join([f"{p['name']} - [Слушать]({p['url']})" for p in playlists])
         await query.edit_message_text(f"Популярные плейлисты ({genre.capitalize()}):\n{message}", parse_mode="Markdown")
     else:
         await query.edit_message_text(f"Не удалось найти плейлисты для жанра {genre.capitalize()}.")
 
-async def random_tracks_by_genre(update: Update, context):
+# Случайные треки по жанру
+async def random_tracks_by_genre(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query is None or "genre_" not in query.data:
-        await update.message.reply_text("Ошибка: некорректный запрос.")
-        return
-
+    
     await query.answer()
-    genre = query.data.split("_")[1]
 
+    genre = query.data  # Получаем жанр, как в обработчике show_playlists
     tracks = get_random_tracks_by_genre(genre)
+    
     if tracks:
         message = "\n".join([f"{track['name']} - {track['artist']} [Слушать]({track['url']})" for track in tracks])
         await query.edit_message_text(f"Случайные треки для жанра {genre.capitalize()}:\n{message}", parse_mode="Markdown")
     else:
         await query.edit_message_text(f"Не удалось найти треки для жанра {genre.capitalize()}.")
 
-async def handle_search(update: Update, context):
+# Поиск треков и плейлистов
+async def handle_search(update: Update, context: CallbackContext):
     query = " ".join(context.args)
     
     user = update.message.from_user
@@ -93,5 +100,13 @@ async def handle_search(update: Update, context):
     else:
         await update.message.reply_text("Плейлисты не найдены.")
 
-async def favorites(update: Update, context):
+# Функция "Избранное" (в разработке)
+async def favorites(update: Update, context: CallbackContext):
     await update.message.reply_text("Функция в разработке.")
+
+# Регистрация обработчиков
+def register_handlers(dispatcher):
+    dispatcher.add_handler(CommandHandler("start", start))
+    dispatcher.add_handler(CommandHandler("search", handle_search))
+    dispatcher.add_handler(CallbackQueryHandler(show_playlists))  # для плейлистов
+    dispatcher.add_handler(CallbackQueryHandler(random_tracks_by_genre))  # для случайных треков по жанру

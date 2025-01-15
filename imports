@@ -1,0 +1,7 @@
+logging  # Для логирования
+
+# Установка: pip install python-telegram-bot
+
+# Установка: pip install spotipy (если используется Spotipy для Spotify API)
+
+# db: работа с базой данных (SQLite)
